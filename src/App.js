@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router';
 import './App.css';
+import AuthWithHistory from './Auth/auth';
+import DonutComponent from './pages/DonutChart';
+import LoginPage from './pages/login-page';
+import Profile from './pages/profile';
+import UploadFile from './pages/upload-page';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthWithHistory>
+      <Routes>
+        <Route path='/' element={<LoginPage/>} />
+        <Route path='/csvfile' element={<UploadFile/>} />
+        <Route path='/profile' element={<Profile/>} />
+        <Route path='/donut' element={<DonutComponent/>} />
+      </Routes>
+      </AuthWithHistory>
     </div>
   );
 }

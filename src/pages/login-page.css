@@ -1,0 +1,22 @@
+.outerComponent{
+    display: grid;
+    place-items: center;
+}
+
+.innerComponent{
+    border: 1px solid violet;
+    padding: 150px;
+    background-color: aliceblue;
+}
+
+.login-button{
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+}
+
+.btn-primary{
+    width: 50%;
+    padding: 10px;
+    border-radius: 3px;
+}
